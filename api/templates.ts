@@ -1,4 +1,4 @@
-import got from 'got'
+import got, { Response } from 'got'
 import { NowRequest, NowResponse } from '@vercel/node'
 
 interface Repository {
@@ -41,7 +41,7 @@ export default async (req: NowRequest, res: NowResponse): Promise<void> => {
     }
     res.json(results)
   } catch (e) {
-    console.log(e)
-    res.status(500)
+    const response = e.response as Response
+    res.status(response.statusCode).json(response.body)
   }
 }
