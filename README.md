@@ -18,7 +18,7 @@ Response Type:
 interface Item {
   name: string
   owner: string
-  fullName: string
+  fullname: string
   description: string
   updated: string
 }
