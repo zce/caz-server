@@ -26,6 +26,10 @@ interface Item {
 type Result = Item[]
 ```
 
+## Related
+
+- [zce/caz](https://github.com/zce/caz) - A simple yet powerful template-based Scaffolding tools for my personal productivity.
+
 ## License
 
 [MIT](LICENSE) &copy; [zce](https://zce.me)
