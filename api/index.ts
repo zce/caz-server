@@ -26,7 +26,7 @@ const fetchAllRepos = (owner: string) => {
 }
 
 export default async (req: NowRequest, res: NowResponse): Promise<void> => {
-  const owner = req.query.username ?? req.query.owner ?? 'caz-templates'
+  const owner = req.query.username || req.query.owner || 'caz-templates'
   const items = fetchAllRepos(owner.toString())
   const results: Item[] = []
   for await (const item of items) {
