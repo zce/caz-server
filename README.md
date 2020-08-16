@@ -9,7 +9,7 @@
 Get user's repositories.
 
 ```shell
-$ curl http://caz.vercel.app/api
+$ curl https://caz.vercel.app/api?username=zce
 ```
 
 Response Type:
