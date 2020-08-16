@@ -1,0 +1,21 @@
+{
+  "name": "caz-server",
+  "version": "0.1.0",
+  "description": "CAZ Server",
+  "keywords": [
+    "caz",
+    "github",
+    "api",
+    "zce"
+  ],
+  "repository": "zce/caz-server",
+  "license": "MIT",
+  "author": "zce <w@zce.me> (https://zce.me)",
+  "devDependencies": {
+    "@vercel/node": "^1.7.4",
+    "vercel": "^19.2.0"
+  },
+  "dependencies": {
+    "got": "^11.5.2"
+  }
+}
