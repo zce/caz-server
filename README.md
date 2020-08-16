@@ -4,12 +4,12 @@
 
 ## Endpoints
 
-### GET `/api`
+### GET `/templates`
 
 Get user's repositories.
 
 ```shell
-$ curl https://caz.vercel.app/api?username=zce
+$ curl https://caz.vercel.app/templates?username=zce
 ```
 
 Response Type:
