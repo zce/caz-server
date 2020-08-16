@@ -12,7 +12,7 @@ interface Repository {
 interface Item {
   name: string
   owner: string
-  fullName: string
+  fullname: string
   description: string
   updated: string
 }
@@ -33,7 +33,7 @@ export default async (req: NowRequest, res: NowResponse): Promise<void> => {
     results.push({
       name: item.name,
       owner: item.owner.login,
-      fullName: item.full_name,
+      fullname: item.full_name,
       description: item.description,
       updated: item.updated_at
     })
