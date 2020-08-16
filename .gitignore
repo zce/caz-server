@@ -1,6 +1,5 @@
 .DS_Store
 .vercel
 node_modules
-index.html
 package-lock.json
 yarn.lock

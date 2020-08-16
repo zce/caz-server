@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Server &laquo; CAZ</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css">
+  <link rel="stylesheet" href="https://unpkg.com/minima.css">
+  <style>
+    .site-header {
+      padding-top: 2.0rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .site-main > section {
+      margin-top: 5rem;
+    }
+
+    .site-footer {
+      padding: 2.5rem 0;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>CAZ Server</h1>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <section class="container">
+      <h2>Introduction</h2>
+      <p>
+        API Server for <a href="https://github.com/zce/caz">zce/caz</a>
+        <br> ε=ε=ε=(~￣▽￣)~
+      </p>
+      <p><a href="https://github.com/zce/caz#readme" class="button">Getting started</a></p>
+    </section>
+
+    <section class="container">
+      <h2>Endpoints</h2>
+      <h3>GET <code>/api</code></h3>
+      <p>Get user's repositories.</p>
+      <pre><code>$ curl http://caz.vercel.app/api</code></pre>
+      <p>Response Type:</p>
+      <pre><code>interface Item {
+  name: string
+  owner: string
+  fullName: string
+  description: string
+  updated: string
+}
+
+type Result = Item[]</code></pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="container">
+      This service is Hosted on <a href="https://vercel.com">Vercel</a>.&nbsp;&nbsp;
+      <a href="https://github.com/zce/caz-server">&lt;/&gt;</a> with <span class="heart">&hearts;</span> by <a href="https://zce.me">zce</a>.
+      Licensed under the <a href="https://github.com/zce/caz-server/blob/master/LICENSE">MIT License</a>.
+    </p>
+  </footer>
+</body>
+
+</html>
