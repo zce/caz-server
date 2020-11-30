@@ -11,10 +11,15 @@
   "repository": "zce/caz-server",
   "license": "MIT",
   "author": "zce <w@zce.me> (https://zce.me)",
+  "renovate": {
+    "extends": [
+      "zce"
+    ]
+  },
   "dependencies": {
-    "got": "^11.5.2"
+    "got": "^11.8.0"
   },
   "devDependencies": {
-    "@vercel/node": "^1.7.4"
+    "@vercel/node": "^1.8.5"
   }
 }
