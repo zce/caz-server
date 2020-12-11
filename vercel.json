@@ -1,6 +1,5 @@
 {
   "routes": [
-    { "src": "/", "dest": "/public/index.html" },
     { "src": "/(?<endpoint>[^/]*)", "dest": "/api/$endpoint.ts" }
   ]
 }
