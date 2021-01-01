@@ -17,9 +17,9 @@
     ]
   },
   "dependencies": {
-    "got": "^11.8.0"
+    "got": "11.8.0"
   },
   "devDependencies": {
-    "@vercel/node": "^1.8.5"
+    "@vercel/node": "1.8.5"
   }
 }
