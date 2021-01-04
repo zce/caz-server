@@ -9,13 +9,17 @@
 Get user's repositories.
 
 ```shell
-$ curl https://caz.vercel.app/templates?username=zce
+$ curl https://caz.vercel.app/templates?owner=zce
 ```
 
-Response Type:
+#### Params
+
+- `owner`: github user or organization name, alias: `username`, default: `'caz-templates'`
+
+#### Response Type
 
 ```typescript
-interface Item {
+interface Template {
   name: string
   owner: string
   fullname: string
@@ -23,7 +27,7 @@ interface Item {
   updated: string
 }
 
-type Result = Item[]
+type Result = Template[]
 ```
 
 ## Related

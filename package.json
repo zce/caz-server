@@ -11,6 +11,10 @@
   "repository": "zce/caz-server",
   "license": "MIT",
   "author": "zce <w@zce.me> (https://zce.me)",
+  "scripts": {
+    "lint": "ts-standard --fix",
+    "develop": "npx vercel dev"
+  },
   "renovate": {
     "extends": [
       "zce"
@@ -20,6 +24,7 @@
     "got": "11.8.1"
   },
   "devDependencies": {
-    "@vercel/node": "1.8.5"
+    "@vercel/node": "1.8.5",
+    "ts-standard": "10.0.0"
   }
 }

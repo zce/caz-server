@@ -4,23 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Server &laquo; CAZ</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
   <link rel="stylesheet" href="https://unpkg.com/normalize.css">
   <link rel="stylesheet" href="https://unpkg.com/minima.css">
   <style>
-    .site-header {
-      padding-top: 2.0rem;
-      border-bottom: 1px solid #eee;
-    }
-
-    .site-main > section {
-      margin-top: 5rem;
-    }
-
-    .site-footer {
-      padding: 2.5rem 0;
-      border-top: 1px solid #eee;
-    }
+    .site-header { padding-top: 2.0rem; border-bottom: 1px solid #eee; }
+    .site-main > section { margin-top: 5rem; }
+    .site-footer { padding: 2.5rem 0; border-top: 1px solid #eee; }
   </style>
 </head>
 
@@ -44,9 +33,13 @@
       <h2>Endpoints</h2>
       <h3>GET <code>/templates</code></h3>
       <p>Get user's repositories.</p>
-      <pre><code>$ curl https://caz.vercel.app/templates?username=zce</code></pre>
-      <p>Response Type:</p>
-      <pre><code>interface Item {
+      <pre><code>$ curl https://caz.vercel.app/templates?owner=zce</code></pre>
+      <h4>Params</h4>
+      <ul>
+        <li><code>owner</code>: github user or organization name, alias: <code>username</code>, default: <code>'caz-templates'</code></li>
+      </ul>
+      <h4>Response Type</h4>
+      <pre><code>interface Template {
   name: string
   owner: string
   fullname: string
@@ -54,7 +47,7 @@
   updated: string
 }
 
-type Result = Item[]</code></pre>
+type Result = Template[]</code></pre>
     </section>
   </main>
 

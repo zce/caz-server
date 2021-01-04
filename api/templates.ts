@@ -1,5 +1,5 @@
-import got, { Response } from 'got'
 import { NowRequest, NowResponse } from '@vercel/node'
+import got, { Response } from 'got'
 
 interface Repository {
   name: string
@@ -9,7 +9,7 @@ interface Repository {
   owner: { login: string }
 }
 
-interface Item {
+interface Template {
   name: string
   owner: string
   fullname: string
@@ -17,7 +17,7 @@ interface Item {
   updated: string
 }
 
-const fetchAllRepos = (owner: string) => {
+const fetchAllRepos = (owner: string): AsyncIterableIterator<Repository> => {
   return got.paginate<Repository>(`https://api.github.com/users/${owner}/repos?type=owner&sort=updated&per_page=100`, {
     timeout: 5 * 1000,
     username: process.env.GITHUB_CLIENT_ID,
@@ -26,11 +26,10 @@ const fetchAllRepos = (owner: string) => {
 }
 
 export default async (req: NowRequest, res: NowResponse): Promise<void> => {
-  const owner = req.query.username || req.query.owner || 'caz-templates'
+  const owner = req.query.owner ?? req.query.username ?? 'caz-templates'
   try {
-    const items = fetchAllRepos(owner.toString())
-    const results: Item[] = []
-    for await (const item of items) {
+    const results: Template[] = []
+    for await (const item of fetchAllRepos(owner.toString())) {
       results.push({
         name: item.name,
         owner: item.owner.login,
