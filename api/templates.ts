@@ -1,4 +1,4 @@
-import { NowRequest, NowResponse } from '@vercel/node'
+import { VercelRequest, VercelResponse } from '@vercel/node'
 import got, { Response } from 'got'
 
 interface Repository {
@@ -25,7 +25,7 @@ const fetchAllRepos = (owner: string): AsyncIterableIterator<Repository> => {
   })
 }
 
-export default async (req: NowRequest, res: NowResponse): Promise<void> => {
+export default async (req: VercelRequest, res: VercelResponse): Promise<void> => {
   const owner = req.query.owner ?? req.query.username ?? 'caz-templates'
   try {
     const results: Template[] = []
