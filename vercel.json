@@ -1,5 +1,5 @@
 {
-  "routes": [
-    { "src": "/(?<endpoint>[^/]*)", "dest": "/api/$endpoint.ts" }
+  "rewrites": [
+    { "source": "/:endpoint*", "destination": "/api/:endpoint*" }
   ]
 }
