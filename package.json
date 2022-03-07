@@ -24,7 +24,7 @@
     "got": "11.8.2"
   },
   "devDependencies": {
-    "@vercel/node": "1.9.1",
+    "@vercel/node": "1.13.0",
     "ts-standard": "10.0.0"
   }
 }
