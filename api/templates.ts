@@ -19,7 +19,7 @@ interface Template {
 
 const fetchAllRepos = (owner: string): AsyncIterableIterator<Repository> => {
   return got.paginate<Repository>(`https://api.github.com/users/${owner}/repos?type=owner&sort=updated&per_page=100`, {
-    timeout: 5 * 1000,
+    timeout: { request: 5 * 1000 },
     username: process.env.GITHUB_CLIENT_ID,
     password: process.env.GITHUB_CLIENT_SECRET
   })
