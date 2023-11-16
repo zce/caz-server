@@ -20,7 +20,7 @@
     "got": "12.0.2"
   },
   "devDependencies": {
-    "@vercel/node": "1.13.0",
+    "@vercel/node": "3.0.11",
     "ts-standard": "11.0.0"
   },
   "renovate": {
